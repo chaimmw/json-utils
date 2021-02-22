@@ -2,7 +2,7 @@ const jsonfile = require('jsonfile');
 const _ = require('lodash');
 
 
-  export function alphaJson(file, data) {
+  function alphaJson(file, data) {
     const sorted = Object.keys(data).sort((keyA, keyB) => keyA.localeCompare(keyB));
     const alphab = sorted.reduce((acc, curr) => {
         return {
@@ -20,7 +20,7 @@ const _ = require('lodash');
   }
 
 
-  export function updateAlphaJson(file, newFile) {
+  function updateAlphaJson(file, newFile) {
 
     jsonfile.readFile(file, function (err, obj) {
 
@@ -41,3 +41,8 @@ const _ = require('lodash');
         if (err) console.error(err)
       });
   }
+
+  module.exports = {
+    alphaJson,
+    updateAlphaJson
+  };

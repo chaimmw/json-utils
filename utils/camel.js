@@ -2,7 +2,7 @@ const jsonfile = require('jsonfile');
 const _ = require('lodash');
 
 
-  export function camelJson(file, data) {
+  function camelJson(file, data) {
     const cameledData = Object.keys(data).reduce((acc, curr) => {
         const key = _.camelCase(curr);
         return {
@@ -20,7 +20,7 @@ const _ = require('lodash');
   }
 
 
-  export function updateCamelJson(file, newFile) {
+  function updateCamelJson(file, newFile) {
 
     jsonfile.readFile(file, function (err, obj) {
 
@@ -41,5 +41,10 @@ const _ = require('lodash');
         if (err) console.error(err)
       });
   }
+
+  module.exports = {
+    camelJson,
+    updateCamelJson
+  };
 
 
