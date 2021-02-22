@@ -22,7 +22,7 @@ const _ = require('lodash');
 
   function updateAlphaJson(file, newFile) {
 
-    jsonfile.readFile(file, function (err, obj) {
+    jsonfile.readFile(file, function (err, data) {
 
         const sorted = Object.keys(data).sort((keyA, keyB) => keyA.localeCompare(keyB));
         const alphab = sorted.reduce((acc, curr) => {

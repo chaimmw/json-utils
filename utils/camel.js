@@ -28,7 +28,7 @@ const _ = require('lodash');
             const key = _.camelCase(curr);
             return {
                 ...acc,
-                [key]: data[curr]
+                [key]: obj[curr]
             };
         }, {});
         jsonfile.writeFile(newFile, cameledData, {spaces: 2}, function (err) {
