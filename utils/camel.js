@@ -31,7 +31,8 @@ const _ = require('lodash');
                 [key]: obj[curr]
             };
         }, {});
-        jsonfile.writeFile(newFile, cameledData, {spaces: 2}, function (err) {
+        const newFileWrite = newFile || file;
+        jsonfile.writeFile(newFileWrite, cameledData, {spaces: 2}, function (err) {
             if (err) {
                 console.error(err)
             } else {

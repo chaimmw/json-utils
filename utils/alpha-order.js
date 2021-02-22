@@ -31,7 +31,8 @@ const _ = require('lodash');
                 [curr]: data[curr]
             };
         }, {});
-        jsonfile.writeFile(file, alphab, {spaces: 2}, function (err) {
+        const newFileWrite = newFile || file;
+        jsonfile.writeFile(newFileWrite, alphab, {spaces: 2}, function (err) {
             if (err) {
                 console.error(err)
             } else {
