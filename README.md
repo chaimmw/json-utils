@@ -11,6 +11,7 @@ some functions for working with json, including: alphabetizing and camel casing 
 - [`updateCamelJson(file, newFile)`](#updateCamelJson-options) 
 - [`alphaJson(file, data)`](#alphaJson-options)
 - [`updateAlphaJson(file, newFile)`](#updateAlphaJson-options) 
+- [`addAlphaJson(file, newData, newFile)`](#addAlphaJson-options) 
 
 
 
@@ -31,6 +32,13 @@ some functions for working with json, including: alphabetizing and camel casing 
 
 ### updateAlphaJson(file, newFile)
 
-- file: string file to write the data to
+- file: string file to read the data from
 - newFile: string new file to write data to - can be the same as original
+
+
+### addAlphaJson(file, newData, newFile)
+
+- file: string file to read the data from
+- newData: new data to be added
+- newFile: string new file to write data to - optional, other wise the original file will be used
 
