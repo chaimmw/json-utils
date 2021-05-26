@@ -42,3 +42,5 @@ some functions for working with json, including: alphabetizing and camel casing 
 - newData: new data to be added
 - newFile: string new file to write data to - optional, other wise the original file will be used
 
+to publish to npm
+$ npm publish --access=public
